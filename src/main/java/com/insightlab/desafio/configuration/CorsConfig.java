@@ -22,7 +22,7 @@ public class CorsConfig implements RepositoryRestConfigurer {
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry corsRegistry) {
         corsRegistry.addMapping("/**")
 		.allowedOrigins("http://localhost:3000")
-		.allowedMethods("GET", "POST", "PUT", "DELETE")
+		.allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH")
 		.allowedHeaders("*")
 		.allowCredentials(true);
 

@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: desafio-insightlab
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: desafio-insightlab
+    ports:
+    - 5536:5432
+    volumes:
+      - ./test_data/data_desafio-insightlab:/var/lib/postgresql/data
